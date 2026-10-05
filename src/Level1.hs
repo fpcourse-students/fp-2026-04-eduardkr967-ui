@@ -95,7 +95,7 @@ nSumDigits n = go (abs n) 0 0
     go 0 count sum
       | count == 0 = (1, 0)
       | otherwise  = (count, sum)
-    go x count sum = go (x `div` 10) (count + 1) (sum + x `mod` 10)
+    go x count sum = go (div x 10) (count + 1) (sum + mod x 10)
 
 
 -- 1.6. Предскажите тип
